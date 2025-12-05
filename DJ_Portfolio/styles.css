@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f4f5f7;
+    background-image: url('Background_Image.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+header {
+    background: linear-gradient(135deg, #16213e 0%, #0a0e27 100%);
+    color: #e0e0e0;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 3px solid #00d4ff;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    background: #0f1629;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,212,255,0.12);
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    color: #00d4ff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.portfolio-item {
+    background: #16213e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s;
+    border: 1px solid rgba(0,212,255,0.08);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(176, 184, 193, 0.15);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio-item-content {
+    padding: 1.5rem;
+    color: #e0e0e0;
+}
+
+footer {
+    background: #0f1629;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(0,212,255,0.12);
+    border-radius: 0 0 12px 12px;
+}
+
+section {
+    padding: 2.5rem 2rem;
+    max-width: 880px;
+    margin: 2rem auto;
+    text-align: left;
+    background: rgba(22, 33, 62, 0.92);
+    color: #e0e0e0;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 1;
+}
+
+section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Background image for About section */
+section:nth-of-type(2) {
+    background-image: none;
+}
+
+/* Background image for Events section */
+section:nth-of-type(3) {
+    background-image: none;
+}
+
+/* Background image for Testimonials section */
+section:nth-of-type(4) {
+    background-image: none;
+}
+
+/* Background image for Contact section */
+section:nth-of-type(5) {
+    background-image: none;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    font-size: 2rem;
+    color: #00d4ff;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #00d4ff;
+}
+
+section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+section ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+section li {
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #00d4ff;
+    color: #0a0e27;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #00a8cc;
+}
+
+/* Intro Modal */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #16213e;
+    padding: 2.5rem 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #16213e;
+    color: #e0e0e0;
+    border: 2px solid #00d4ff;
+    border-radius: 8px;
+    border: 2px solid #00d4ff;
+    animation: slideUp 0.5s ease-out;
+    position: relative;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h2 {
+    color: #00d4ff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    color: #e0e0e0;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.close {
+    color: #00d4ff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #00a8cc;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #0a0e27;
+    margin: 2rem auto;
+    padding: 0;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fade {
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slideshow Navigation Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #00d4ff;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+    z-index: 10;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 212, 255, 0.3);
+    color: #ffffff;
+}
+
+/* Dot indicators */
+.dot-container {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #0f1629;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 8px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #00d4ff;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 1.5rem 1rem;
+        max-width: 95%;
+        margin: 1.5rem auto;
+    }
+
+    .slideshow {
+        height: 300px;
+    }
+    
+    .prev, .next {
+        padding: 12px;
+        font-size: 18px;
+    }
+}

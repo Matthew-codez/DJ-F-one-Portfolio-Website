@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ F-one Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Intro Popup Modal -->
+    <div id="introModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeIntro()">&times;</span>
+            <h2>DJ F-one</h2>
+            <p> Welcome to my Portfolio</p>
+            <button onclick="closeIntro()">Enter Site</button>
+        </div>
+    </div>
+
+    <header>
+        <h1>DJ F-one</h1>
+    </header>
+
+    <!-- Slideshow Section -->
+    <section class="slideshow-container">
+        <div class="slideshow">
+            <div class="slide fade">
+                <img src="dj_image.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="event_image.jpg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="event_image1.jpg" alt="Slide 3">
+            </div>
+            <div class="slide fade">
+                <img src="event_image2.jpg" alt="Slide 4">
+            </div>
+
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <!-- Dot indicators -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+
+    <main>
+        <section>
+            <h2>About</h2>
+            <p></p>
+        </section>
+        <section>
+            <h2>Upcoming Events</h2> 
+            <ul>
+                <img src="event_image.jpg" alt="Venue Image coming soon">
+                <li>Event 1: Date and Location</li>
+
+                <img src="event_image1.jpg" alt="Venue Image coming soon">
+                <li>Event 2: Date and Location</li>
+
+                <img src="event_image2.jpg" alt="Venue Image coming soon">
+                <li>Event 3: Date and Location</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Testimonials</h2>
+            
+        </section>
+        <section>
+            <button onclick="location.href='Contact_Us.html'">Get in Touch</button>
+        </section>
+    </main>
+
+    <script>
+        let slideIndex = 1;
+        let slideTimer;
+
+        // Show intro modal on page load
+        window.addEventListener('load', function() {
+            showSlides(slideIndex);
+            autoSlides();
+        });
+
+        // Close intro modal
+        function closeIntro() {
+            document.getElementById('introModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('introModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Slideshow functions
+        function changeSlide(n) {
+            clearTimeout(slideTimer);
+            showSlides(slideIndex += n);
+            autoSlides();
+        }
+
+        function currentSlide(n) {
+            clearTimeout(slideTimer);
+            showSlides(slideIndex = n);
+            autoSlides();
+        }
+
+        function showSlides(n) {
+            const slides = document.getElementsByClassName('slide');
+            const dots = document.getElementsByClassName('dot');
+            
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(' active', '');
+            }
+            
+            slides[slideIndex - 1].style.display = 'block';
+            dots[slideIndex - 1].className += ' active';
+        }
+
+        function autoSlides() {
+            slideTimer = setTimeout(function() {
+                slideIndex++;
+                showSlides(slideIndex);
+                autoSlides();
+            }, 5000); // Change slide every 5 seconds
+        }
+    </script>
+</body>
+</html>

@@ -4,38 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ F-one Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Bungee+Shade&family=Rubik+Glitch&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Intro Popup Modal -->
-    <div id="introModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeIntro()">&times;</span>
-            <h2>DJ F-one</h2>
-            <p> Welcome to my Portfolio</p>
-            <button onclick="closeIntro()">Enter Site</button>
+    <header class="site-header">
+        <div class="header-brand">
+            <a href="index.html" class="logo-link" aria-label="DJ F-one Home"></a>
+            <div class="header-text">
+                <span class="header-title">DJ F-one</span>
+            </div>
         </div>
-    </div>
-
-    <header>
-        <h1>DJ F-one</h1>
     </header>
 
     <!-- Slideshow Section -->
     <section class="slideshow-container">
         <div class="slideshow">
-            <div class="slide fade">
-                <img src="dj_image.jpg" alt="Slide 1">
-            </div>
-            <div class="slide fade">
-                <img src="event_image.jpg" alt="Slide 2">
-            </div>
-            <div class="slide fade">
-                <img src="event_image1.jpg" alt="Slide 3">
-            </div>
-            <div class="slide fade">
-                <img src="event_image2.jpg" alt="Slide 4">
-            </div>
+            <div class="slide fade"><img src="setup9.jpeg" alt="Slide 1"></div>
+            <div class="slide fade"><img src="setup8.jpeg" alt="Slide 2"></div>
+            <div class="slide fade"><img src="setup10.jpeg" alt="Slide 3"></div>
+            <div class="slide fade"><img src="dancefloor.jpeg" alt="Slide 4"></div>
+            <div class="slide fade"><img src="setup4.jpeg" alt="Slide 5"></div>
+            <div class="slide fade"><img src="setup6.jpeg" alt="Slide 6"></div>
+            <div class="slide fade"><img src="setup7.jpeg" alt="Slide 7"></div>
+            <div class="slide fade"><img src="setup1.jpeg" alt="Slide 8"></div>
 
             <!-- Navigation arrows -->
             <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
@@ -48,33 +44,88 @@
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
         </div>
     </section>
 
     <main>
-        <section>
-            <h2>About</h2>
-            <p></p>
-        </section>
-        <section>
-            <h2>Upcoming Events</h2> 
-            <ul>
-                <img src="event_image.jpg" alt="Venue Image coming soon">
-                <li>Event 1: Date and Location</li>
+        <section class="packages">
+            <h2>Wedding DJ Service Packages</h2>
+            <p class="intro-text">We offer tailored sound and music solutions for your special day, designed to ensure a seamless and memorable experience from start to finish. Each component of our service can be booked individually or as a complete package at a discounted rate.</p>
+            
+            <div class="packages-grid">
+                <!-- Individual Services -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Ceremony</h3>
+                        <span class="price">R3,500</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>Professional sound setup (Only High-end sound system used)</li>
+                        <li>PA system for officiant and vows</li>
+                        <li>Background music before, during, and after the ceremony</li>
+                    </ul>
+                </div>
 
-                <img src="event_image1.jpg" alt="Venue Image coming soon">
-                <li>Event 2: Date and Location</li>
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Canapés & Drinks</h3>
+                        <span class="price">R2,000</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>Sound system setup for cocktail hour (Only High-end sound system used)</li>
+                        <li>Curated background music to enhance the atmosphere</li>
+                    </ul>
+                </div>
 
-                <img src="event_image2.jpg" alt="Venue Image coming soon">
-                <li>Event 3: Date and Location</li>
-            </ul>
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Reception</h3>
+                        <span class="price">R9,500</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>Full sound system setup (Only High-end sound system used)</li>
+                        <li>Ambient and dance floor lighting</li>
+                        <li>PA system for speeches and announcements</li>
+                        <li>Professional DJ services for the evening celebration</li>
+                    </ul>
+                </div>
+
+                <!-- Featured Package -->
+                <div class="package-card package-card--featured">
+                    <div class="package-badge">Special Offer</div>
+                    <div class="package-header">
+                        <h3>Full-Day Wedding Package</h3>
+                        <span class="price">R12,500</span>
+                    </div>
+                    <p class="package-subtitle">Includes all the above:</p>
+                    <ul class="package-features">
+                        <li>Ceremony sound setup and music</li>
+                        <li>Cocktail hour background music setup</li>
+                        <li>Full reception sound, lighting, and DJ services</li>
+                    </ul>
+                    <div class="package-bonus">
+                        <strong>Bonus:</strong>
+                        <ul>
+                            <li>Complimentary delivery, setup, and breakdown of all equipment</li>
+                            <li>Professional coordination of sound requirements throughout the day</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
         <section>
             <h2>Testimonials</h2>
             
         </section>
         <section>
-            <button onclick="location.href='other-page.html'">Get in Touch</button>
+             <div class="cta-buttons">
+            <button class="cta-button cta-button--ghost" onclick="location.href='other-page.html'">Get in Touch</button>
+            <button class="cta-button cta-button--ghost" onclick="location.href='About.html'">About</button>
+            </div>
         </section>
     </main>
 
@@ -82,24 +133,11 @@
         let slideIndex = 1;
         let slideTimer;
 
-        // Show intro modal on page load
+        // Show slides on page load
         window.addEventListener('load', function() {
             showSlides(slideIndex);
             autoSlides();
         });
-
-        // Close intro modal
-        function closeIntro() {
-            document.getElementById('introModal').style.display = 'none';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('introModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
 
         // Slideshow functions
         function changeSlide(n) {

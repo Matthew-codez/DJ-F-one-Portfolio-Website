@@ -620,3 +620,70 @@ footer {
         height: 48px;
     }
 }
+
+/* Testimonials Section Styling */
+details {
+    background: rgba(12, 12, 12, 0.8);
+    border: 2px solid rgba(207, 174, 107, 0.4);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+details:hover {
+    border-color: rgba(207, 174, 107, 0.7);
+    background: rgba(12, 12, 12, 0.9);
+    box-shadow: 0 4px 20px rgba(207, 174, 107, 0.2);
+}
+
+details[open] {
+    border-color: #cfae6b;
+    background: rgba(207, 174, 107, 0.05);
+}
+
+summary {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f4d596;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+summary:hover {
+    color: #cfae6b;
+}
+
+/* Add arrow indicator */
+summary::before {
+    content: "▶";
+    display: inline-block;
+    transition: transform 0.3s ease;
+    color: #cfae6b;
+    font-size: 0.9rem;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+/* Hide default marker */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::marker {
+    display: none;
+}
+
+details p {
+    padding: 1rem 0.5rem 0.5rem 2.25rem;
+    color: #e0e0e0;
+    line-height: 1.7;
+    font-style: italic;
+}

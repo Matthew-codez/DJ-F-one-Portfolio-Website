@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ F-one Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Bungee+Shade&family=Rubik+Glitch&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-brand">
+            <a href="index.html" class="logo-link" aria-label="DJ F-one Home"></a>
+            <div class="header-text">
+                <span class="header-title">DJ F-one Sound and Entertainment Services</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Slideshow Section -->
+    <section class="slideshow-container">
+        <div class="slideshow">
+            <div class="slide fade"><img src="setup9.jpeg" alt="Slide 1"></div>
+            <div class="slide fade"><img src="setup8.jpeg" alt="Slide 2"></div>
+            <div class="slide fade"><img src="setup10.jpeg" alt="Slide 3"></div>
+            <div class="slide fade"><img src="dancefloor.jpeg" alt="Slide 4"></div>
+            <div class="slide fade"><img src="setup4.jpeg" alt="Slide 5"></div>
+            <div class="slide fade"><img src="setup6.jpeg" alt="Slide 6"></div>
+            <div class="slide fade"><img src="setup7.jpeg" alt="Slide 7"></div>
+            <div class="slide fade"><img src="setup1.jpeg" alt="Slide 8"></div>
+
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <!-- Dot indicators -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
+        </div>
+    </section>
+
+    <main>
+        <section class="packages">
+            <h2>Wedding Entertainment and Sound Packages</h2>
+            <p class="intro-text">We offer tailored sound and music solutions for your special day, designed to ensure a seamless and memorable experience from start to finish. Each component of our service can be booked individually or as a complete package at a discounted rate.</p>
+            
+            <div class="packages-grid">
+                <!-- Individual Services -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Ceremony</h3>
+                        <!-- <span class="price">R3,500</span> -->
+                    </div>
+                    <ul class="package-features">
+                        <li>Professional sound setup (Only High-end sound system used)</li>
+                        <li>PA system for officiant and vows</li>
+                        <li>Background music before, during, and after the ceremony</li>
+                    </ul>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Canapés & Drinks</h3>
+                        <!-- <span class="price">R2,000</span> -->
+                    </div>
+                    <ul class="package-features">
+                        <li>Sound system setup for cocktail hour (Only High-end sound system used)</li>
+                        <li>Curated background music to enhance the atmosphere</li>
+                    </ul>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Reception</h3>
+                        <!-- <span class="price">R9,500</span> -->
+                    </div>
+                    <ul class="package-features">
+                        <li>Full sound system setup (Only High-end sound system used)</li>
+                        <li>Ambient and dance floor lighting</li>
+                        <li>PA system for speeches and announcements</li>
+                        <li>Professional DJ services for the evening celebration</li>
+                    </ul>
+                </div>
+
+                <!-- Featured Package -->
+                <div class="package-card package-card--featured">
+                    <div class="package-badge">Special Offer</div>
+                    <div class="package-header">
+                        <h3>Full-Day Wedding Package</h3>
+                        <!-- <span class="price">R12,500</span> -->
+                    </div>
+                    <p class="package-subtitle">Includes all the above:</p>
+                    <ul class="package-features">
+                        <li>Ceremony sound setup and music</li>
+                        <li>Cocktail hour background music setup</li>
+                        <li>Full reception sound, lighting, and DJ services</li>
+                    </ul>
+                    <div class="package-bonus">
+                        <strong>Bonus:</strong>
+                        <ul>
+                            <li>Complimentary delivery, setup, and breakdown of all equipment</li>
+                            <li>Professional coordination of sound requirements throughout the day</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="packages">
+            <h2>Corporate and Private Event Sound Packages</h2>
+            
+            <div class="packages-grid">
+                <!-- Individual Services -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3></h3>
+                        <!-- <span class="price"></span> -->
+                    </div>
+                    <ul class="package-features">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3></h3>
+                        <!-- <span class="price"></span> -->
+                    </div>
+                    <ul class="package-features">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3></h3>
+                        <!-- <span class="price"></span> -->
+                    </div>
+                    <ul class="package-features">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <!-- Featured Package
+                <div class="package-card package-card--featured">
+                    <div class="package-badge">Special Offer</div>
+                    <div class="package-header">
+                        <h3></h3>
+                        <!-- <span class="price"></span> -->
+                    <!-- </div>
+                    <p class="package-subtitle"></p>
+                    <ul class="package-features">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div class="package-bonus">
+                        <strong>Bonus:</strong>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div> --> 
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Testimonials</h2>
+            <details>
+                <summary>Amy February owner at Amy Lauren Weddings & Events.</summary>
+                <p>"My name is Amy February owner at Amy Lauren Weddings & Events. We first worked with Shawn a few years ago at a wedding in Simon's Town. His professionalism and skills paired with his passion for his work made him stand out as a DJ service provider. We gave worked with many DJs but Shawn is honestly one of the best. His friendly disposition and seasoned experience in the industry makes him a great choice for any event be it a wedding, party or corporate function. We highly recommend him and will continue to do so to our clients who request DJ and sound."</p>
+            </details>
+            <details>
+                <summary>Summer and Lervaile Lawrence (bride and groom)</summary>
+                <p>"Whenever we find ourselves watching videos of our wedding day, it's pure Nostalgia! We would go back to enjoy that day as much as we did yes but we simply wouldn't change a thing!
+                    I'm talking about the entire day because everything was in sync. We didn't have one problem with sound or music and I think that's so important for an event to run smoothly.
+                    Initial communication with us was brief but you got it down to the T. We shared our music genres with you, we shared the venue and event details so you could prepare sound and lighting appropriately and you delivered.
+                    The wedding party arrived earlier than anticipated yet the set up for sound and music was done and ready for action. Punctual and well presented!
+                    We didn't ever have to come speak to you or signal you because you were prepared with order of events and your communication with the event coordinator was fantastic. You played the songs as requested for each activity eg walking in song, first dance etc. And where we didn't request you just read the crowd, and it flowed. Not one moment of silence. Great attention to detail.
+                    Mic set up for speeches were flawless, no faulting at
+                    all.
+                    Quality sound reached the entire audience. And the lighting for dancing was just amazing!
+                    The seats were literally empty at our wedding, because everyone was on the dance floor! We got so many compliments days to follow, saying it was the best wedding they've been to in years! Your sound and lighting service was so good, I've reccommended it to many other friends and family, of which 3 people used within the following year, also with great experience.
+                    This all within the midst of covid with restrictions and different protocols in place, you've still managed to deliver a memorable night that we will cherish forever. We are eternally grateful Shawn Ferreira!!"</p>
+        </section>
+        <section>
+             <div class="cta-buttons">
+            <button class="cta-button cta-button--ghost" onclick="location.href='other-page.html'">Get in Touch</button>
+            <button class="cta-button cta-button--ghost" onclick="location.href='About.html'">About</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let slideIndex = 1;
+        let slideTimer;
+
+        // Show slides on page load
+        window.addEventListener('load', function() {
+            showSlides(slideIndex);
+            autoSlides();
+        });
+
+        // Slideshow functions
+        function changeSlide(n) {
+            clearTimeout(slideTimer);
+            showSlides(slideIndex += n);
+            autoSlides();
+        }
+
+        function currentSlide(n) {
+            clearTimeout(slideTimer);
+            showSlides(slideIndex = n);
+            autoSlides();
+        }
+
+        function showSlides(n) {
+            const slides = document.getElementsByClassName('slide');
+            const dots = document.getElementsByClassName('dot');
+            
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(' active', '');
+            }
+            
+            slides[slideIndex - 1].style.display = 'block';
+            dots[slideIndex - 1].className += ' active';
+        }
+
+        function autoSlides() {
+            slideTimer = setTimeout(function() {
+                slideIndex++;
+                showSlides(slideIndex);
+                autoSlides();
+            }, 5000); // Change slide every 5 seconds
+        }
+    </script>
+</body>
+</html>
